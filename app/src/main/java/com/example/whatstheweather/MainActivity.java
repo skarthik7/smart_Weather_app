@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     public void getWeather(View view) {
         editText.getText().toString();
         DownloadTask task = new DownloadTask();
-        task.execute("https://openweathermap.org/data/2.5/weather?q="+ editText.getText().toString()+ "&appid=b6907d289e10d714a6e88b30761fae22");
+        task.execute("https://openweathermap.org/data/2.5/weather?q="+ editText.getText().toString()+ " "); //API key must be inserted here
 
         InputMethodManager mgr = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE); //Hide Keyboard line 1
         mgr.hideSoftInputFromWindow(editText.getWindowToken(),0); //Hide Keyboard line 2
